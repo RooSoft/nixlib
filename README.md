@@ -1,5 +1,18 @@
 # nixlib
 
+## Add to a flake project
+
+```nix
+inputs.nixlib.url = "github:roosoft/nixlib";
+
+outputs = {nixlib}: let
+  hostname = "dummy";
+  mac = nixlib.network.createMaccAddress hostname;
+in {  
+  ...
+}
+```
+
 ## Test in the REPL
 
 ```bash
