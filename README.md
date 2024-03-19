@@ -7,7 +7,7 @@ inputs.nixlib.url = "github:roosoft/nixlib";
 
 outputs = {nixlib}: let
   hostname = "dummy";
-  mac = nixlib.network.createMaccAddress hostname;
+  mac = nixlib.network.createMacAddress hostname;
 in {  
   ...
 }
